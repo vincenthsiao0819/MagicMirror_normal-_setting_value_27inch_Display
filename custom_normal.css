@@ -1,0 +1,107 @@
+/* MagicMirror 27-inch scaling and layout fixes */
+body { 
+    background-color: transparent !important; 
+    zoom: 1.5; 
+}
+.region.fullscreen {
+    background-color: transparent !important;
+}
+* {
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.9), 0px 0px 3px rgba(0,0,0,0.9) !important;
+}
+
+.region.left { 
+    left: 10px !important;
+    max-width: 370px !important;
+    overflow: visible !important;
+}
+.region.right { 
+    right: 15px !important;
+    max-width: 340px !important;
+    overflow: visible !important;
+}
+
+/* ?ôË??øÔ??™Â?‰∏äÊ?ÔºåÂÖ∂‰ªñÁ?Â∞ç‰???*/
+.region.bottom.center {
+    width: 500px !important; 
+    position: absolute !important;
+    bottom: 195px !important; /* ?üÊú¨ 120px Â£ìÂà∞Á≥ªÁµ±?Ä?ãÔ??πÁÇ∫ 250px ÂæÄ‰∏äÊ? */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 9999 !important;
+}
+
+.module table { 
+    table-layout: auto !important; 
+}
+
+/* Âº∑Âà∂Â§©Ê∞£‰∏çÊ?Ë°åÔ?Ë°å‰??ÜÊ??ì‰??õË? */
+.module.weather table, 
+.module.calendar .time {
+    white-space: nowrap !important;
+}
+
+/* Global Text Size Adjustments */
+.xsmall { font-size: 24px !important; line-height: 1.4 !important; }
+.small { font-size: 28px !important; line-height: 1.4 !important; }
+.normal, .medium { font-size: 32px !important; line-height: 1.4 !important; }
+
+/* Calendar Sizing */
+.module.calendar table {
+    table-layout: auto !important;
+    width: 100% !important;
+}
+.module.calendar td.title { 
+    font-size: 28px !important; 
+    line-height: 1.3 !important;
+    white-space: normal !important; 
+    word-wrap: break-word !important; 
+    text-align: left !important;
+    vertical-align: top !important; 
+    padding-left: 5px !important; 
+}
+.module.calendar td.time { 
+    font-size: 28px !important; 
+    line-height: 1.3 !important; 
+    color: #ffeb3b !important; 
+    font-weight: bold !important; 
+    text-align: right !important; 
+    padding-left: 10px !important; 
+    vertical-align: top !important;
+    white-space: nowrap !important;
+    width: 1px !important; 
+}
+.module.calendar td.symbol { 
+    font-size: 28px !important; 
+    padding-right: 0px !important; 
+    vertical-align: top !important; 
+    width: 1px !important; 
+    text-align: center !important;
+}
+
+.module.calendar .xsmall { font-size: 22px !important; }
+
+/* World Cup Odds Adjustments */
+.module.MMM-WorldCupOdds { font-size: 18px !important; }
+.module.MMM-WorldCupOdds table, .module.MMM-WorldCupOdds th, .module.MMM-WorldCupOdds td { white-space: nowrap !important; }
+.module.MMM-WorldCupOdds th { font-size: 16px !important; }
+.module.MMM-WorldCupOdds .time { color: #888888 !important; font-weight: normal !important; font-size: 18px !important; padding-right: 5px;}
+.module.MMM-WorldCupOdds .team { color: #ffffff !important; font-weight: bold !important; font-size: 20px !important; text-shadow: 0px 0px 8px rgba(255,255,255,0.6) !important; }
+
+/* Holiday Event Colors */
+.module.calendar .holiday-title { color: #ff5252 !important; font-weight: bold !important; }
+.module.calendar .holiday-time { color: #ff8a80 !important; font-weight: bold !important; }
+.module.calendar .holiday-symbol { color: #ff5252 !important; }
+
+/* MMM-Markdown Styles */
+.region.bottom.center .MMM-Markdown {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #a5d6a7;
+    border-radius: 15px;
+    padding: 15px 30px;
+    box-shadow: 0 0 15px rgba(165, 214, 167, 0.5);
+}
+.MMM-Markdown h1 { font-size: 32px !important; color: #ffeb3b !important; font-weight: bold !important; border-bottom: 1px solid #ffeb3b; padding-bottom: 5px; margin-bottom: 5px; }
+.MMM-Markdown h2 { font-size: 28px !important; color: #66b3ff !important; margin-top: 10px; margin-bottom: 5px; }
+.MMM-Markdown p, .MMM-Markdown li { font-size: 26px !important; line-height: 1.4 !important; color: #ffffff !important; margin: 0; }
+.MMM-Markdown ul { padding-left: 20px !important; margin: 5px 0 0 0; }
