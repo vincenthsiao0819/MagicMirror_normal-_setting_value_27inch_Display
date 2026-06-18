@@ -14,11 +14,17 @@ body {
     left: 10px !important;
     max-width: 370px !important;
     overflow: visible !important;
+
+    margin-left: -15px !important;
+    max-width: 350px !important;
 }
 .region.right { 
     right: 15px !important;
     max-width: 340px !important;
     overflow: visible !important;
+
+    margin-right: -15px !important;
+    max-width: 330px !important;
 }
 
 
