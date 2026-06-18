@@ -25,7 +25,7 @@ body {
 .region.bottom.center {
     width: 500px !important; 
     position: absolute !important;
-    bottom: 195px !important; 
+    bottom: 130px !important; 
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 9999 !important;
@@ -116,4 +116,12 @@ body {
 @keyframes tickerv-us {
   0% { transform: translateY(0); }
   100% { transform: translateY(calc(-50% - 10px)); }
+}
+
+/* Reduce spacing between left column modules (Stocks & World Cup) */
+.region.left .module {
+    margin-bottom: 15px !important;
+}
+.module.MMM-Jast {
+    margin-bottom: 5px !important;
 }
