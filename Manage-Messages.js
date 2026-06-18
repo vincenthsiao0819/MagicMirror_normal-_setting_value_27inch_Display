@@ -46,7 +46,7 @@ const css = `<style>
     100% { transform: scale(1); opacity: 1; box-shadow: 0 0 8px #FF5252; }
 }
 .msg-board-container {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.35);
     border: 1px solid rgba(165, 214, 167, 0.25);
     border-radius: 15px;
     padding: 15px 30px;
@@ -88,7 +88,7 @@ let html = css + '\n<div class="msg-board-container">\n';
 
 // Use base64 decoding for literal strings to 100% bypass Windows terminal encoding mangling
 const titleStr = Buffer.from('8J+TjSDlrrbluq3nlZnoqIDmnb8=', 'base64').toString('utf8');
-const userIcon = Buffer.from('8J+RoA==', 'base64').toString('utf8');
+const userIcon = Buffer.from('8J+RpA==', 'base64').toString('utf8');
 const bellIcon = Buffer.from('8J+SlA==', 'base64').toString('utf8');
 const newMsgText = Buffer.from('5paw55WZ6KiA', 'base64').toString('utf8');
 const publishTimeText = Buffer.from('55m85biD5pmC6ZaT77ya', 'base64').toString('utf8');
