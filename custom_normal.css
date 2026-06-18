@@ -1,7 +1,7 @@
 /* MagicMirror 27-inch scaling and layout fixes */
 body { 
     background-color: transparent !important; 
-    zoom: 1.5; 
+    zoom: 1.6; 
 }
 .region.fullscreen {
     background-color: transparent !important;
@@ -12,20 +12,20 @@ body {
 
 .region.left { 
     left: 10px !important;
-    max-width: 370px !important;
+    max-width: 550px !important;
     overflow: visible !important;
 }
 .region.right { 
     right: 15px !important;
-    max-width: 340px !important;
+    max-width: 550px !important;
     overflow: visible !important;
 }
 
-/* ?™è??¿ï??ªå?ä¸Šæ?ï¼Œå…¶ä»–ç?å°ä???*/
+/* ?ï¿½ï¿½??ï¿½ï¿½??ï¿½ï¿½?ä¸Šï¿½?ï¼Œå…¶ä»–ï¿½?å°ï¿½???*/
 .region.bottom.center {
     width: 500px !important; 
     position: absolute !important;
-    bottom: 195px !important; /* ?Ÿæœ¬ 120px å£“åˆ°ç³»çµ±?€?‹ï??¹ç‚º 250px å¾€ä¸Šæ? */
+    bottom: 195px !important; /* ?ï¿½æœ¬ 120px å£“åˆ°ç³»çµ±?ï¿½?ï¿½ï¿½??ï¿½ç‚º 250px å¾€ä¸Šï¿½? */
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 9999 !important;
@@ -35,7 +35,7 @@ body {
     table-layout: auto !important; 
 }
 
-/* å¼·åˆ¶å¤©æ°£ä¸æ?è¡Œï?è¡Œä??†æ??“ä??›è? */
+/* å¼·åˆ¶å¤©æ°£ä¸ï¿½?è¡Œï¿½?è¡Œï¿½??ï¿½ï¿½??ï¿½ï¿½??ï¿½ï¿½? */
 .module.weather table, 
 .module.calendar .time {
     white-space: nowrap !important;
@@ -100,3 +100,22 @@ body {
 .MMM-Markdown p, .MMM-Markdown li { font-size: 26px !important; line-height: 1.4 !important; color: #ffffff !important; margin: 0; }
 .MMM-Markdown ul { padding-left: 20px !important; margin: 5px 0 0 0; }
 
+
+/* MagicMirror US Portfolio Scrolling Wrapper */
+.us-portfolio .jast-wrapper.vertical {
+    height: calc(var(--size) * 1.44 * 7) !important;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.us-portfolio .jast-wrapper.vertical ul {
+  animation-name: tickerv-us !important;
+  animation-duration: 40s !important;
+  animation-iteration-count: infinite !important;
+  animation-timing-function: linear !important;
+}
+
+@keyframes tickerv-us {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(calc(-50% - 10px)); }
+}

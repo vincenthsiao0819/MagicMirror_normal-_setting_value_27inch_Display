@@ -1,7 +1,7 @@
 /* MagicMirror 27-inch scaling and layout fixes */
 body { 
     background-color: transparent !important; 
-    zoom: 1.5; 
+    zoom: 1.6; 
 }
 .region.fullscreen {
     background-color: transparent !important;
@@ -12,12 +12,12 @@ body {
 
 .region.left { 
     left: 10px !important;
-    max-width: 370px !important;
+    max-width: 550px !important;
     overflow: visible !important;
 }
 .region.right { 
     right: 15px !important;
-    max-width: 340px !important;
+    max-width: 550px !important;
     overflow: visible !important;
 }
 .region.bottom.center {
@@ -87,3 +87,10 @@ body {
 .MMM-Markdown h2 { font-size: 28px !important; color: #66b3ff !important; margin-top: 10px; margin-bottom: 5px; }
 .MMM-Markdown p, .MMM-Markdown li { font-size: 26px !important; line-height: 1.4 !important; color: #ffffff !important; margin: 0; }
 .MMM-Markdown ul { padding-left: 20px !important; margin: 5px 0 0 0; }
+
+/* MagicMirror US Portfolio Scrolling Wrapper */
+.us-portfolio .jast-wrapper.vertical {
+    height: calc(var(--size) * 1.44 * 7) !important;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}

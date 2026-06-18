@@ -29,12 +29,12 @@ let config = {
 		{
 			module: "MMM-Jast",
 			position: "top_left",
-			header: "Portfolio",
+			header: "PORTFOLIO",
 			config: {
 				maxWidth: "100%",
 				updateIntervalInSeconds: 300,
 				fadeSpeedInSeconds: 3.5,
-				scroll: "none", 
+				displayMode: "none", 
 				maxStocksInOneLine: 1,
 				useGrouping: false,
 				currencyStyle: "code",
@@ -48,17 +48,54 @@ let config = {
 				numberDecimalsValues: 2,
 				numberDecimalsPercentages: 2,
 				stocks: [
-					{ name: "NVDA", symbol: "NVDA" },
-					{ name: "TSM", symbol: "TSM" },
-					{ name: "Micron", symbol: "MU" },
-					{ name: "QCOM", symbol: "QCOM" },
-					{ name: "INTC", symbol: "INTC" },
-					{ name: "MPWR", symbol: "MPWR" },
-					{ name: "VRT", symbol: "VRT" },
 					{ name: "S&P 500", symbol: "^GSPC" },
 					{ name: "Nasdaq", symbol: "^IXIC" },
 					{ name: "TAIEX", symbol: "^TWII" },
-					{ name: "TSMC(TW)", symbol: "2330.TW" }, { name: "0050", symbol: "0050.TW" }
+					{ name: "TSMC(TW)", symbol: "2330.TW" }, 
+					{ name: "0050", symbol: "0050.TW" }
+				]
+			}
+		},
+		{
+			module: "MMM-Jast",
+			position: "top_left",
+			classes: "us-portfolio",
+			config: {
+				maxWidth: "100%",
+				updateIntervalInSeconds: 300,
+				fadeSpeedInSeconds: 2.5,
+				displayMode: "vertical", 
+				maxStocksInOneLine: 1,
+				useGrouping: false,
+				currencyStyle: "code",
+				lastUpdateFormat: "HH:mm",
+				showColors: true,
+				showCurrency: true,
+				showChangePercent: true,
+				showChangeValue: false,
+				showHiddenStocks: false,
+				showLastUpdate: false,
+				numberDecimalsValues: 2,
+				numberDecimalsPercentages: 2,
+				stocks: [
+					{ name: "APH(成本$127.00)", symbol: "APH" },
+					{ name: "COPX(成本$60.00)", symbol: "COPX" },
+					{ name: "DGRO(成本$67.54)", symbol: "DGRO" },
+					{ name: "GLW(成本$193.57)", symbol: "GLW" },
+					{ name: "GOOGL(成本$333.66)", symbol: "GOOGL" },
+					{ name: "INTC", symbol: "INTC" },
+					{ name: "MPWR(成本$1076.13)", symbol: "MPWR" },
+					{ name: "MRVL(成本$164.50)", symbol: "MRVL" },
+					{ name: "Micron(成本$457.36)", symbol: "MU" },
+					{ name: "NVDA(成本$190.15)", symbol: "NVDA" },
+					{ name: "QCOM(成本$149.98)", symbol: "QCOM" },
+					{ name: "SCHD(成本$30.19)", symbol: "SCHD" },
+					{ name: "SOXX(成本$267.00)", symbol: "SOXX" },
+					{ name: "SPCX(成本$195.10)", symbol: "SPCX" },
+					{ name: "TDY(成本$567.62)", symbol: "TDY" },
+					{ name: "TSM(成本$336.79)", symbol: "TSM" },
+					{ name: "VOO(成本$613.78)", symbol: "VOO" },
+					{ name: "VRT(成本$176.50)", symbol: "VRT" }
 				]
 			}
 		},

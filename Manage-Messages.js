@@ -87,7 +87,7 @@ const css = `<style>
 let html = css + '\n<div class="msg-board-container">\n';
 
 // Use base64 decoding for literal strings to 100% bypass Windows terminal encoding mangling
-const titleStr = Buffer.from('8J+TjSDlrrbluq3nlZnoiIDmnb8=', 'base64').toString('utf8');
+const titleStr = Buffer.from('8J+TjSDlrrbluq3nlZnoqIDmnb8=', 'base64').toString('utf8');
 const userIcon = Buffer.from('8J+RoA==', 'base64').toString('utf8');
 const bellIcon = Buffer.from('8J+SlA==', 'base64').toString('utf8');
 const newMsgText = Buffer.from('5paw55WZ6KiA', 'base64').toString('utf8');
