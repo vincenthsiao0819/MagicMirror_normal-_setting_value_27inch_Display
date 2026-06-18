@@ -46,7 +46,7 @@ const css = `<style>
     100% { transform: scale(1); opacity: 1; box-shadow: 0 0 8px #FF5252; }
 }
 .msg-board-container {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(165, 214, 167, 0.25);
     border-radius: 15px;
     padding: 15px 30px;
@@ -94,7 +94,9 @@ const newMsgText = Buffer.from('5paw55WZ6KiA', 'base64').toString('utf8');
 const publishTimeText = Buffer.from('55m85biD5pmC6ZaT77ya', 'base64').toString('utf8');
 
 if (validMessages.length === 0) {
-    html += `<div class="msg-title-container empty"><span style="font-size: 32px; font-weight: bold; color: #FFFFFF; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">${titleStr}</span></div>\n`;
+    html = `<style>.msg-board-container { display: none !important; }</style>`;
+    // Empty content
+
     html += '</div>';
 } else {
     html += `<div class="msg-title-container"><span style="font-size: 32px; font-weight: bold; color: #FFFFFF; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">${titleStr}</span></div>\n`;
