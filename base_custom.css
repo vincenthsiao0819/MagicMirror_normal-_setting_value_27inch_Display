@@ -1,7 +1,7 @@
 /* MagicMirror 27-inch scaling and layout fixes */
 body { 
     background-color: transparent !important; 
-    zoom: 1.45; 
+    zoom: 1.5; 
 }
 .region.fullscreen {
     background-color: transparent !important;
@@ -10,22 +10,22 @@ body {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.9), 0px 0px 3px rgba(0,0,0,0.9) !important;
 }
 
-.region.left {
+.region.left { 
     left: 10px !important;
-    max-width: 460px !important;
-    overflow: hidden !important;
+    max-width: 370px !important;
+    overflow: visible !important;
 }
-.region.right {
+.region.right { 
     right: 15px !important;
-    max-width: 460px !important;
-    overflow: hidden !important;
+    max-width: 340px !important;
+    overflow: visible !important;
 }
 
-/* ?ï¿½ï¿½??ï¿½ï¿½??ï¿½ï¿½?ä¸Šï¿½?ï¼Œå…¶ä»–ï¿½?å°ï¿½???*/
+/* ?™è??¿ï??ªå?ä¸Šæ?ï¼Œå…¶ä»–ç?å°ä???*/
 .region.bottom.center {
     width: 500px !important; 
     position: absolute !important;
-    bottom: 195px !important; /* ?ï¿½æœ¬ 120px å£“åˆ°ç³»çµ±?ï¿½?ï¿½ï¿½??ï¿½ç‚º 250px å¾€ä¸Šï¿½? */
+    bottom: 195px !important; /* ?Ÿæœ¬ 120px å£“åˆ°ç³»çµ±?€?‹ï??¹ç‚º 250px å¾€ä¸Šæ? */
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 9999 !important;
@@ -35,7 +35,7 @@ body {
     table-layout: auto !important; 
 }
 
-/* å¼·åˆ¶å¤©æ°£ä¸ï¿½?è¡Œï¿½?è¡Œï¿½??ï¿½ï¿½??ï¿½ï¿½??ï¿½ï¿½? */
+/* å¼·åˆ¶å¤©æ°£ä¸æ?è¡Œï?è¡Œä??†æ??“ä??›è? */
 .module.weather table, 
 .module.calendar .time {
     white-space: nowrap !important;
@@ -100,23 +100,3 @@ body {
 .MMM-Markdown p, .MMM-Markdown li { font-size: 26px !important; line-height: 1.4 !important; color: #ffffff !important; margin: 0; }
 .MMM-Markdown ul { padding-left: 20px !important; margin: 5px 0 0 0; }
 
-
-/* MagicMirror US Portfolio Scrolling Wrapper */
-.us-portfolio .jast-wrapper.vertical {
-    height: 270px !important;
-    overflow: hidden !important;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-}
-
-.us-portfolio .jast-wrapper.vertical ul {
-  animation-name: tickerv-us !important;
-  animation-duration: 40s !important;
-  animation-iteration-count: infinite !important;
-  animation-timing-function: linear !important;
-}
-
-@keyframes tickerv-us {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(calc(-50% - 10px)); }
-}
