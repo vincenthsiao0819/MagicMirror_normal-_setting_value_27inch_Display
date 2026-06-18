@@ -1,7 +1,7 @@
-/* MagicMirror 27-inch scaling and layout fixes */
+
 body { 
     background-color: transparent !important; 
-    zoom: 1.45; 
+    zoom: 1.05; 
 }
 .region.fullscreen {
     background-color: transparent !important;
@@ -11,21 +11,21 @@ body {
 }
 
 .region.left {
-    left: 10px !important;
-    max-width: 460px !important;
-    overflow: hidden !important;
+    left: -20px !important;
+    max-width: 350px !important;
+    overflow: visible !important;
 }
 .region.right {
-    right: 15px !important;
-    max-width: 460px !important;
-    overflow: hidden !important;
+    right: -25px !important;
+    max-width: 330px !important;
+    overflow: visible !important;
 }
 
-/* ?��??��??��?上�?，其他�?對�???*/
+
 .region.bottom.center {
     width: 500px !important; 
     position: absolute !important;
-    bottom: 195px !important; /* ?�本 120px 壓到系統?�?��??�為 250px 往上�? */
+    bottom: 130px !important; 
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 9999 !important;
@@ -35,18 +35,18 @@ body {
     table-layout: auto !important; 
 }
 
-/* 強制天氣不�?行�?行�??��??��??��? */
+
 .module.weather table, 
 .module.calendar .time {
     white-space: nowrap !important;
 }
 
-/* Global Text Size Adjustments */
+
 .xsmall { font-size: 24px !important; line-height: 1.4 !important; }
 .small { font-size: 28px !important; line-height: 1.4 !important; }
 .normal, .medium { font-size: 32px !important; line-height: 1.4 !important; }
 
-/* Calendar Sizing */
+
 .module.calendar table {
     table-layout: auto !important;
     width: 100% !important;
@@ -81,19 +81,19 @@ body {
 
 .module.calendar .xsmall { font-size: 22px !important; }
 
-/* World Cup Odds Adjustments */
+
 .module.MMM-WorldCupOdds { font-size: 18px !important; }
 .module.MMM-WorldCupOdds table, .module.MMM-WorldCupOdds th, .module.MMM-WorldCupOdds td { white-space: nowrap !important; }
 .module.MMM-WorldCupOdds th { font-size: 16px !important; }
 .module.MMM-WorldCupOdds .time { color: #888888 !important; font-weight: normal !important; font-size: 18px !important; padding-right: 5px;}
 .module.MMM-WorldCupOdds .team { color: #ffffff !important; font-weight: bold !important; font-size: 20px !important; text-shadow: 0px 0px 8px rgba(255,255,255,0.6) !important; }
 
-/* Holiday Event Colors */
+
 .module.calendar .holiday-title { color: #ff5252 !important; font-weight: bold !important; }
 .module.calendar .holiday-time { color: #ff8a80 !important; font-weight: bold !important; }
 .module.calendar .holiday-symbol { color: #ff5252 !important; }
 
-/* MMM-Markdown Styles */
+
 
 .MMM-Markdown h1 { font-size: 32px !important; color: #ffeb3b !important; font-weight: bold !important; border-bottom: 1px solid #ffeb3b; padding-bottom: 5px; margin-bottom: 5px; }
 .MMM-Markdown h2 { font-size: 28px !important; color: #66b3ff !important; margin-top: 10px; margin-bottom: 5px; }
@@ -101,22 +101,27 @@ body {
 .MMM-Markdown ul { padding-left: 20px !important; margin: 5px 0 0 0; }
 
 
-/* MagicMirror US Portfolio Scrolling Wrapper */
 .us-portfolio .jast-wrapper.vertical {
-    height: 270px !important;
+    height: 315px !important;
     overflow: hidden !important;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
     mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
-
 .us-portfolio .jast-wrapper.vertical ul {
   animation-name: tickerv-us !important;
   animation-duration: 40s !important;
   animation-iteration-count: infinite !important;
   animation-timing-function: linear !important;
 }
-
 @keyframes tickerv-us {
   0% { transform: translateY(0); }
   100% { transform: translateY(calc(-50% - 10px)); }
+}
+
+/* Reduce spacing between left column modules (Stocks & World Cup) */
+.region.left .module {
+    margin-bottom: 15px !important;
+}
+.module.MMM-Jast {
+    margin-bottom: 5px !important;
 }

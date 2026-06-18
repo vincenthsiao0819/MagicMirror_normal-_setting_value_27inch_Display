@@ -29,7 +29,7 @@ let config = {
 		{
 			module: "MMM-Jast",
 			position: "top_left",
-			header: "PORTFOLIO",
+			header: "MARKET & TW",
 			config: {
 				maxWidth: "100%",
 				updateIntervalInSeconds: 300,
@@ -51,14 +51,14 @@ let config = {
 					{ name: "S&P 500", symbol: "^GSPC" },
 					{ name: "Nasdaq", symbol: "^IXIC" },
 					{ name: "TAIEX", symbol: "^TWII" },
-					{ name: "TSMC(TW)", symbol: "2330.TW" }, 
+					{ name: "TSMC(TW)", symbol: "2330.TW" },
 					{ name: "0050", symbol: "0050.TW" }
 				]
-			}
-		},
+			}},
 		{
 			module: "MMM-Jast",
 			position: "top_left",
+			header: "US PORTFOLIO",
 			classes: "us-portfolio",
 			config: {
 				maxWidth: "100%",
