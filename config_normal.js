@@ -134,7 +134,12 @@ let config = {
 			position: "top_right",
 			config: {
 			    maximumEntries: 8,
-			    wrapEvents: true,
+			    wrapEvents: false,
+			    maxTitleLength: 20,
+				timeFormat: "absolute",
+				urgency: 0,
+				getRelative: 0,
+				dateFormat: "M/D (dd)",
 				calendars: [
 					{
 						fetchInterval: 5 * 60 * 1000,
