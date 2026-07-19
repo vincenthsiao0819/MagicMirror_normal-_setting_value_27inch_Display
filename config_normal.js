@@ -100,10 +100,6 @@ let config = {
 			}
 		},
 		{
-			module: "MMM-WorldCupOdds",
-			position: "top_left"
-		},
-		{
 			module: "MMM-BilingualProverb",
 			position: "top_left"
 		},
@@ -177,20 +173,7 @@ let config = {
 				macHost: "192.168.64.6"
 			}
 		},
-		{
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [{
-					title: "World Cup News",
-					url: "https://www.espn.com/espn/rss/soccer/news"
-				}],
-				showSourceTitle: true,
-				showPublishDate: true,
-				broadcastNewsFeeds: true,
-				broadcastNewsUpdates: true
-			}
-		}
+
 	]
 };
 if (typeof module !== "undefined") { module.exports = config; }
