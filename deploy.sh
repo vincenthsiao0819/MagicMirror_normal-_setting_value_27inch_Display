@@ -41,8 +41,12 @@ sshpass -e ssh -o StrictHostKeyChecking=no magic@192.168.50.204 'powershell -NoP
       Rename-Item -Path \$codeCachePath -NewName \$newCodeCacheName -ErrorAction SilentlyContinue
   }
   
-  Write-Host \"Restarting via schtasks...\"
-  schtasks /run /tn \"RestartMM\"
+  Write-Host \"Creating one-shot restart task...\"
+  schtasks /create /tn \"RestartDeployMM\" /tr \"cmd.exe /c cd /d C:\Users\magic\MagicMirror && npm run start\" /sc once /st 00:00 /ru magic /f
+  Start-Sleep -Seconds 1
+  schtasks /run /tn \"RestartDeployMM\"
+  Start-Sleep -Seconds 3
+  schtasks /delete /tn \"RestartDeployMM\" /f
 "'
 
 echo "Done."
