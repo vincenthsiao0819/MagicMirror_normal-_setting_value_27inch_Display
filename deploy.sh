@@ -4,6 +4,10 @@ export SSHPASS="6611"
 echo "Deploying config_normal.js..."
 sshpass -e scp -o StrictHostKeyChecking=no config_normal.js magic@192.168.50.204:C:/Users/magic/MagicMirror/config/config_normal.js
 
+# Also copy to config.js (MagicMirror reads config.js, not config_normal.js)
+echo "Syncing to config.js..."
+sshpass -e ssh -o StrictHostKeyChecking=no magic@192.168.50.204 'powershell -NoProfile -Command "Copy-Item -Path C:\Users\magic\MagicMirror\config\config_normal.js -Destination C:\Users\magic\MagicMirror\config\config.js -Force"'
+
 echo "Deploying config_morning.js..."
 sshpass -e scp -o StrictHostKeyChecking=no config_morning.js magic@192.168.50.204:C:/Users/magic/MagicMirror/config/config_morning.js
 
